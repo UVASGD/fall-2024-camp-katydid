@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     };
     public HashSet<flags> dialogueFlags = new HashSet<flags>();
 
+    public GameObject UIHints;
+    public GameObject HintRef;
+
     private void Start()
     {
         body.sprite = bodies[PlayerPrefs.GetInt("bodyIndex")];
@@ -64,6 +67,13 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("esc"))
         {
             SaveSystem.SavePlayer(this);
+        }
+        if (Input.GetButtonDown("f"))
+        {
+            if (HintRef != null) {
+                return;
+            }
+            HintRef = Instantiate(UIHints, transform);
         }
     }
 

@@ -7,13 +7,25 @@ public class UI_Hints : MonoBehaviour
 {
     private GameObject player;
     private Player playerScript;
+
+    public GameObject hintUI;
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
+        player = GameObject.Find("Player");
+        playerScript = player.GetComponent<Player>();
+        PopulateGrid();
+    }
+    void PopulateGrid()
+    {
+        Debug.Log("started");
         foreach (Player.flags flag in playerScript.dialogueFlags) {
             if (Player.flags.defaultFlag == flag) {
                 // is a text dialogue
-                Debug.Log(flag);
+                Debug.Log("Created");
+                GameObject UIPiece = Instantiate(hintUI,transform);
+                // do ui stuff in here
             } else
             {
                 // other cases, maybe items or whatever
