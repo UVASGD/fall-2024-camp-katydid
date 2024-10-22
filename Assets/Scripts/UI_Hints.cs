@@ -25,6 +25,7 @@ public class UI_Hints : MonoBehaviour
                 // is a text dialogue
                 Debug.Log("Created");
                 GameObject UIPiece = Instantiate(hintUI,transform);
+                UIPiece.GetComponent<UI_HintLabel>().setName(flag);
                 GameObject UIPiece1 = Instantiate(hintUI, transform);
                 GameObject UIPiece2 = Instantiate(hintUI, transform);
                 GameObject UIPiece3 = Instantiate(hintUI, transform);
