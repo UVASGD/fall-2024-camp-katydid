@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public bool moveLock = true;
+
+    private bool firstTimeInventoryOpen = true;
     
     //private Vector2 _input;
     private CharacterController _characterController;
     private float speed = 50f;
+
+    public Inventory inventory;
 
     [SerializeField] private SpriteRenderer body;
     [SerializeField] private SpriteRenderer hair;
@@ -23,6 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Sprite[] mouths;
     [SerializeField] private Sprite[] tops;
 
+    [SerializeField] private UI_Inventory uI_Inventory;
     public enum flags { defaultFlag, //flag put on all dialogue
             testFlag1, 
             testFlag2,
@@ -39,6 +44,7 @@ public class Player : MonoBehaviour
         eyes.sprite = eyePairs[PlayerPrefs.GetInt("eyeIndex")];
         mouth.sprite = mouths[PlayerPrefs.GetInt("mouthIndex")];
         top.sprite = tops[PlayerPrefs.GetInt("topIndex")];
+        inventory = new Inventory();
 
         _characterController = GetComponent<CharacterController>();
 
@@ -47,6 +53,13 @@ public class Player : MonoBehaviour
         for(int i=0; i < data.flags.Length; i++)
         {
             dialogueFlags.Add((flags)data.flags[i]);
+        }
+
+        for(int i=0; i < data.inventoryItems.Length; i++)
+        {
+            InventoryItem inventoryItemData = new InventoryItem();
+            inventoryItemData.itemType = (InventoryItem.ItemType) data.inventoryItems[i];
+            inventory.AddInventoryItem(inventoryItemData);
         }
         
         transform.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
@@ -61,6 +74,16 @@ public class Player : MonoBehaviour
         {
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             _characterController.Move(move * Time.deltaTime * speed);
+        }
+
+        if (Input.GetKeyDown(KeyCode.I) && firstTimeInventoryOpen)
+        {
+            firstTimeInventoryOpen = false;
+            uI_Inventory.SetInventory(inventory);
+
+        } else if (Input.GetKeyDown(KeyCode.I))
+        {
+            uI_Inventory.RefreshInventoryItems();
         }
     }
 
@@ -81,5 +104,10 @@ public class Player : MonoBehaviour
             output += " ";
         }
         Debug.Log(output);
+    }
+
+    public void AddToInventory(InventoryItem inventoryItem)
+    {
+        inventory.AddInventoryItem(inventoryItem);
     }
 }
