@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InnerMonologue : MonoBehaviour
@@ -20,7 +21,8 @@ public class InnerMonologue : MonoBehaviour
     private string[] dialogueSplit;
     private int dialogueIndex = 0;
     private int curDialogue;
-
+    
+    private static InnerMonologue _singleton;
 
     private string[] dialogue = {
         "test dialogue", 
@@ -31,12 +33,34 @@ public class InnerMonologue : MonoBehaviour
         Player.flags.monologueFlag2
     };
 
+    public static InnerMonologue GetImScript()
+    {
+        if (_singleton == null)
+        {
+            GameObject playerRef = GameObject.Find("Player");
+            if (playerRef == null)
+            {
+                Debug.LogError("Player ref is an error in InnerMonologue, rename player to Player");
+                return null;
+            }
+            _singleton = playerRef.AddComponent<InnerMonologue>();
+            _singleton.player = playerRef;
+        }
+        return _singleton;
+    }
+    
     void Start()
     {
-        player = GameObject.Find("Player");
-        playerScript = player.GetComponent<Player>();
-        uiEnabler = GameObject.Find("Inventory Enabler").GetComponent<InventoryEnabler>();
+        if (_singleton != this)
+        {
+            Destroy(this);
+            return;
+        }
 
+        playerScript = player.GetComponent<Player>();
+        textbox = GameObject.Find("Dialogue - Canvas").GetComponent<Canvas>();
+        textMeshPro = textbox.GetComponentInChildren<TextMeshProUGUI>();
+        uiEnabler = GameObject.Find("Inventory Enabler").GetComponent<InventoryEnabler>();
         textbox.enabled = false;
     }
 
