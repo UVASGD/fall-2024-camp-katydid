@@ -33,7 +33,9 @@ public class Player : MonoBehaviour
             testFlag2,
             testFlag3,
             testFlag4,
-            testItemFlag//demo test flags
+            testItemFlag,
+            monologueFlag1,
+            monologueFlag2//demo test flags
     };
     public HashSet<flags> dialogueFlags = new HashSet<flags>();
 
@@ -108,5 +110,14 @@ public class Player : MonoBehaviour
     public void AddToInventory(InventoryItem inventoryItem)
     {
         inventory.AddInventoryItem(inventoryItem);
+    }
+
+    public void InnerMonologueCheck(flags f)
+    {
+        //proof of concept function
+        if(f == flags.testFlag2 && dialogueFlags.Contains(flags.testFlag3) || f == flags.testFlag3 && dialogueFlags.Contains(flags.testFlag2))
+        {
+
+        }
     }
 }
