@@ -41,9 +41,8 @@ public class Player : MonoBehaviour
     {
         body.sprite = bodies[PlayerPrefs.GetInt("bodyIndex")];
         hair.sprite = hairs[PlayerPrefs.GetInt("hairIndex")];
-        eyes.sprite = eyePairs[PlayerPrefs.GetInt("eyeIndex")];
-        mouth.sprite = mouths[PlayerPrefs.GetInt("mouthIndex")];
-        top.sprite = tops[PlayerPrefs.GetInt("topIndex")];
+        eye.sprite = eyes[PlayerPrefs.GetInt("eyeIndex")];
+        body.sprite = bodies[PlayerPrefs.GetInt("topIndex")];
         inventory = new Inventory();
 
         _characterController = GetComponent<CharacterController>();
