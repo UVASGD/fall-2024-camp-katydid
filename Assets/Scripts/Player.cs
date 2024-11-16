@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -14,20 +15,15 @@ public class Player : MonoBehaviour
     private float speed = 50f;
 
     public Inventory inventory;
-
-    [SerializeField] private SpriteRenderer body;
-    [SerializeField] private SpriteRenderer hair;
-    [SerializeField] private SpriteRenderer hairColor;
-    [SerializeField] private SpriteRenderer eye;
-    [SerializeField] private SpriteRenderer eyeColor;
-
-    [SerializeField] private Sprite[] bodies;
-    [SerializeField] private Sprite[] hairs;
-    [SerializeField] private Sprite[] hairColors;
-    [SerializeField] private Sprite[] eyes;
-    [SerializeField] private Sprite[] eyeColors;
     
     [SerializeField] private UI_Inventory uI_Inventory;
+
+    [SerializeField] private Animator baseAnim;
+    [SerializeField] private Animator eyeAnim;
+    [SerializeField] private Transform eyeTrans;
+    [SerializeField] private Transform trans;
+    private int[] spriteArray = new int[3];
+
     public enum flags { defaultFlag, //flag put on all dialogue
             testFlag1, 
             testFlag2,
@@ -41,13 +37,23 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        body.sprite = bodies[PlayerPrefs.GetInt("bodyIndex")];
-        int hairIndex = PlayerPrefs.GetInt("hairIndex");
-        hair.sprite = hairs[hairIndex];
-        hairColor.sprite = hairColors[PlayerPrefs.GetInt("hairCIndex") + hairIndex*5];
-        int eyeIndex = PlayerPrefs.GetInt("eyeIndex");
-        eye.sprite = eyes[eyeIndex];
-        eyeColor.sprite = eyeColors[PlayerPrefs.GetInt("eyeCIndex") + eyeIndex*5];
+        baseAnim = GetComponent<Animator>();
+
+        /*spriteArray[0] = PlayerPrefs.GetInt("bodyIndex");
+        spriteArray[1] = PlayerPrefs.GetInt("hairIndex");
+        spriteArray[2] = PlayerPrefs.GetInt("hairCIndex") + spriteArray[1] * 5;
+        spriteArray[3] = PlayerPrefs.GetInt("eyeIndex");
+        spriteArray[4] = PlayerPrefs.GetInt("eyeCIndex") + spriteArray[3] * 5;*/
+
+        spriteArray[0] = PlayerPrefs.GetInt("bodyIndex");
+        spriteArray[1] = PlayerPrefs.GetInt("hairCIndex") + PlayerPrefs.GetInt("hairIndex") * 5;
+        spriteArray[2] = PlayerPrefs.GetInt("eyeCIndex") + PlayerPrefs.GetInt("eyeIndex") * 5;
+
+        baseAnim.SetFloat("BaseIndex", (float) spriteArray[0]);
+        eyeAnim.SetFloat("EyeIndex", (float)spriteArray[2]);
+        updateX(1);
+        updateY(-1);
+
         inventory = new Inventory();
 
         _characterController = GetComponent<CharacterController>();
@@ -69,6 +75,30 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
         moveLock = true;
         Invoke("moveLockOff", 0.5f);
+
+        //baseAnim.Play(-1,0);
+        //eyeAnim.Play(-1, 0);
+    }
+
+    private void updateX(float num)
+    {
+        baseAnim.SetFloat("X", num);
+        eyeAnim.SetFloat("X", num);
+    }
+    private void updateY(float num)
+    {
+        baseAnim.SetFloat("Y", num);
+
+        if(num > 0)
+        {
+            //eyeAnim.SetLayerWeight(0,0);
+            eyeTrans.position = trans.position + new Vector3(0, 0, 0.02f);
+        }
+        if (num < 0)
+        {
+            //eyeAnim.SetLayerWeight(0, 1);
+            eyeTrans.position = trans.position + new Vector3(0, 0, -0.02f);
+        }
     }
 
     // Update is called once per frame
@@ -78,6 +108,15 @@ public class Player : MonoBehaviour
         {
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             _characterController.Move(move * Time.deltaTime * speed);
+
+            if(move.x != 0)
+            {
+                updateX(move.x);
+            }
+            if (move.z != 0)
+            {
+                updateY(move.z);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.I) && firstTimeInventoryOpen)
