@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ItemAssets : MonoBehaviour
 {
@@ -11,8 +13,24 @@ public class ItemAssets : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SpritesDict = new Dictionary<InventoryItem.ItemType, Sprite>();
+        foreach (var pair  in sprites)
+        {
+            SpritesDict.Add(pair.type, pair.sprite);
+        }
+        
     }
 
-    [SerializeField]
-    public Dictionary<InventoryItem.ItemType, Sprite> Sprites;
+    [Serializable]
+    public struct ItemTypeSprite
+    {
+        public InventoryItem.ItemType type;
+        public Sprite sprite;
+
+    }
+
+    public List<ItemTypeSprite> sprites;
+    
+    public Dictionary<InventoryItem.ItemType, Sprite> SpritesDict;
+    
 }

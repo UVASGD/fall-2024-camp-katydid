@@ -9,26 +9,6 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    /*public struct Dialogue
-    {
-        Dialogue(string name, string[] dialogueText, Flag[] requiredFlags, Flag[] grantedFlags, 
-            InventoryItem.ItemType[] grantedItems
-        ) { 
-            Name = name;
-            DialogueText = dialogueText;
-            RequiredFlags = requiredFlags;
-            GrantedFlags = grantedFlags;
-            GrantedItems = grantedItems;
-        }
-
-        Dialogue(string name);
-        
-        public string Name;
-        public string[] DialogueText;
-        public Flag[] RequiredFlags;
-        public Flag[] GrantedFlags;
-        public InventoryItem.ItemType[] GrantedItems;
-    }*/
     
     private GameObject player;
     private Player playerScript;
@@ -38,9 +18,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private new Camera camera;
     private Canvas _textbox;
     private TextMeshProUGUI _textMeshPro;
+    private TextMeshProUGUI _nameTMP;
     private float _minXBoundary; // Minimum x boundary in screen space
     private float _maxXBoundary; // Maximum x boundary in screen space
-    //private RectTransform arrowRectTransform;
+    private RectTransform _arrowRectTransform;
     
     private int dialogueIndex = 0;
     private int currentConvoIndex = 0;
@@ -64,51 +45,63 @@ public class DialogueManager : MonoBehaviour
         _maxXBoundary = Screen.width * 0.75f;
         player = GameObject.Find("Player");
         playerScript = player.GetComponent<Player>();
-        //arrowRectTransform = GameObject.Find("TextBubbleArrow").GetComponent<RectTransform>();
         _textbox = GameObject.Find("Dialogue - Canvas").GetComponent<Canvas>();
-        _textMeshPro = _textbox.GetComponentInChildren<TextMeshProUGUI>();
+        var tmps = _textbox.GetComponentsInChildren<TextMeshProUGUI>();
+        _textMeshPro = tmps[0];
+        _nameTMP = tmps[1];
+        GameObject arrowRect = GameObject.Find("TextBubbleArrow");
+        if (arrowRect)
+        {
+            _arrowRectTransform = arrowRect.GetComponent<RectTransform>();
+            _arrowRectTransform.gameObject.SetActive(false);
+        }
+        else
+        {
+            _arrowRectTransform = new RectTransform();
+        }
         _textbox.enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Space") && isInDialogue)
+        if ((Input.GetButtonDown("Space") || Input.GetButtonDown("E")) && isInDialogue)
         {
             NextDialogue();
         }
     }
     
-    /*void AdjustDialogueArrow()
+    void AdjustDialogueArrow()
     {
-        UnityEngine.Vector3 npcPosition = transform.position;
-        UnityEngine.Vector3 npcScreenPosition = camera.WorldToScreenPoint(npcPosition);
+        Vector3 npcPosition = transform.position;
+        Vector3 npcScreenPosition = camera.WorldToScreenPoint(npcPosition);
                 
                 if (npcScreenPosition.x > _minXBoundary && npcScreenPosition.x < _maxXBoundary)
                 {
-                    arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(npcScreenPosition.x, Screen.height * .60f);
+                    _arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(npcScreenPosition.x, Screen.height * .60f);
 
                 } else if (npcScreenPosition.x < _minXBoundary)
                 {
-                    arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(_minXBoundary, Screen.height * .60f);
+                    _arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(_minXBoundary, Screen.height * .60f);
 
                 }  else if (npcScreenPosition.x > _maxXBoundary)
                 {
-                    arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(_maxXBoundary, Screen.height * .60f);
+                    _arrowRectTransform.anchoredPosition = new UnityEngine.Vector2(_maxXBoundary, Screen.height * .60f);
                 }
-    }*/
+    }
 
     
     public void RunDialogue(in NPC npc, in int convoIndex)
     {
-        if (!npc)
-        {
-            //InnerMonologue
-        }
         //AdjustDialogueArrow();
+        _nameTMP.SetText(NameEnumToString(npc.npcName));
         isInDialogue = true;
         playerScript.moveLock = true;
         currentConvoIndex = convoIndex;
         currentNPC = npc;
+        if (!currentNPC)
+        {
+            Debug.LogError("No nPC");
+        }
         NextDialogue();
     }
     
@@ -126,6 +119,17 @@ public class DialogueManager : MonoBehaviour
             dialogueIndex = 0;
             isInDialogue = false;
             playerScript.moveLock = false;
+            _textbox.enabled = false;
+
+            foreach (var itemType in currentNPC.GetConvo(currentConvoIndex).GrantedItems)
+            {
+                if (itemType != InventoryItem.ItemType.None)
+                {
+                    playerScript.AddToInventory(new InventoryItem(itemType));
+                }
+            }
+
+            currentNPC.GetConvo(currentConvoIndex).GrantedItems = new[] { InventoryItem.ItemType.None };
             if (currentConvoIndex != 0)
             {
                 foreach (var flag in currentConvo.GrantedFlags)
@@ -136,4 +140,16 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+    
+    public static string NameEnumToString(Name name)
+    {
+        var names = new string[]
+        {
+            "Ed", "Timothy", "Janet", "Alex", "Dylan", "Earl",
+            "Nate", "Charles", "Gen", "Mallory", "Cletus", "Dawn", "Tony", "Dennis",
+            "Benny", "Steph", "Drew", "Kyle", "Kylie", "Vanessa", "Coach", "April", "Kai", "Kraken", "Death"
+        };
+        return names[(int)name];
+    }
+    
 }

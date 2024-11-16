@@ -103,9 +103,8 @@ private void ToggleItemText(Transform itemSlot, InventoryItem item)
             {
                 // If it's inactive, enable it and update the text
                 itemText.gameObject.SetActive(true);
-                Debug.Log(item.itemDescription);
-                textComponent.text = item.itemDescription;
-                Debug.Log(textComponent.text);  // Set the text
+                Debug.Log(item.GetItemDescription());
+                textComponent.text = item.GetItemDescription();
             }
         }
         else

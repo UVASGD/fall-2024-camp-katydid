@@ -28,11 +28,20 @@ public class NPC : MonoBehaviour
 
     void Start()
     {
-        _dialogues = new Convo[] { };
         _dialogueManager = DialogueManager.Get();
+        bool didWork = DialogueInventory.GetDialogues(npcName, out _dialogues);
         _player = GameObject.Find("Player");
         _playerScript = _player.GetComponent<Player>();
-        _uiEnabler = GameObject.Find("Inventory Enabler").GetComponent<InventoryEnabler>();
+        // var uiEnableGo = GameObject.Find("Inventory Enabler");
+        // if (uiEnableGo)
+        // {
+        //     _uiEnabler.GetComponent<InventoryEnabler>();
+        // }
+        // else
+        // {
+        //     Debug.LogError("No inventory enabled found!");
+        // }
+        
 
     }
 
@@ -44,11 +53,12 @@ public class NPC : MonoBehaviour
         }
         double dist = Mathf.Sqrt(Mathf.Pow(_player.transform.position.x - transform.position.x, 2) + Mathf.Pow(_player.transform.position.z - transform.position.z, 2));
         double height = Mathf.Abs(_player.transform.position.y - transform.position.y);
-        if (dist <= 50 && height <= 20)
+        if (dist <= 50 && height <= 20 && 
+            _dialogues.Length > 0 && !_dialogueManager.isInDialogue /*&& !_uiEnabler.GetCurrentUIState()*/)
         {
             _displayingDialogueNotif = true;
             int dialogueIndex = GetDialogue();
-            if (Input.GetButtonDown("E") && !_uiEnabler.GetCurrentUIState() && _displayingDialogueNotif)
+            if (Input.GetButtonDown("E"))
             {
                 _dialogueManager.RunDialogue(this, in dialogueIndex); 
             }
@@ -67,6 +77,10 @@ public class NPC : MonoBehaviour
         {
             var currentDialogue = _dialogues[i];
             var flags = currentDialogue.RequiredFlags;
+            if (flags.Length < 1)
+            {
+                Debug.Log(npcName +" has no required flags for " + _dialogues[i].Dialogue);
+            }
             var flagAddedOnComplete = flags.Last();
             
             if (!_playerScript.dialogueFlags.Contains(flagAddedOnComplete))
@@ -88,6 +102,11 @@ public class NPC : MonoBehaviour
 
     public ref Convo GetConvo(in int index)
     {
+        if (index > _dialogues.Length)
+        {
+            Debug.Log("Warning: Too long");
+        }
+        
         return ref _dialogues[index];
     }
     

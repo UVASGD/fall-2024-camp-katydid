@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -27,10 +28,13 @@ public class InventoryItem
     {
         this.itemType = ItemType.None;
     }
+    
+    public InventoryItem(ItemType itemType)
+    {
+        this.itemType = itemType;
+    }
 
     public ItemType itemType;
-
-    public string itemDescription;
 
     public Sprite GetSprite()
     {
@@ -39,13 +43,33 @@ public class InventoryItem
             case ItemType.None:             
                 return null;
             default:
-                return ItemAssets.Instance.Sprites[itemType];
+                if (ItemAssets.Instance.SpritesDict.ContainsKey(itemType))
+                {
+                    return ItemAssets.Instance.SpritesDict[itemType];
+                }
+
+                return null;
         }
     }
 
+    public static Dictionary<ItemType, String> ItemDescriptions = new()
+    {
+        {ItemType.foolCard, "The Fool Tarot Card: Is Cletus involved?"}
+    };
+
     public string GetItemDescription()
     {
-        return itemDescription;
+        string ret;
+        if (!ItemDescriptions.TryGetValue(itemType, out ret))
+        {
+            return "";
+        }
+
+        if (ret.Equals(""))
+        {
+            return "";
+        }
+        return ItemDescriptions[itemType];
     }
 
 

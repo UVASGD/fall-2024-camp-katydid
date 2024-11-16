@@ -57,7 +57,7 @@ public enum Flag
 
 public enum Name
 {
-    InnerMonologue,
+    InnerMonologue = -1,
     Timothy,
     Ed,
     Janet,
@@ -85,6 +85,8 @@ public enum Name
     Death
 };
 
+
+
 public struct Convo
 {
     public string[] Dialogue;
@@ -92,6 +94,7 @@ public struct Convo
     public Flag[] GrantedFlags;
     public InventoryItem.ItemType[] GrantedItems;
 
+    
     public Convo(string[] strings, Flag[] requiredFlags, Flag[] grantedFlags, InventoryItem.ItemType[] grantedItems)
     {
         Dialogue = strings;
@@ -127,6 +130,7 @@ public struct Convo
 
 public class DialogueInventory : MonoBehaviour
 {
+    
     // Represents a list of dialogue and the required Flags to trigger it
     [Serializable]
     public struct ConvoMetadata
@@ -139,6 +143,8 @@ public class DialogueInventory : MonoBehaviour
             this.dialogueIndex = dialogueIndex;
         }
     }
+    
+   
     
     private static readonly SortedDictionary<Name, Convo[]> AllDialogues = new ()
     {
@@ -160,7 +166,7 @@ public class DialogueInventory : MonoBehaviour
                     "I wouldn't be surprised if benny had something to do with it.","He's always causing trouble." },
                 new []{ Flag.defaultFlag, Flag.weirdNoise}),
             new (
-                new []{  "Oh, Benny's in the clear?", "That's a releif,",
+                new []{  "Oh, Benny's in the clear?", "That's a relief,",
                     "but I hope he's done pulling pranks on the rest of the camp,",
                     "they always keep me on edge."},
                 new []{ Flag.defaultFlag, Flag.weirdNoise, Flag.benNah, Flag.benTalk}),
@@ -188,17 +194,18 @@ public class DialogueInventory : MonoBehaviour
                     "I was getting a tarot reading... ",
                     "Though I did hear some commotion when we flipped the first card, but I really wanted to find out why I got the three of swords.",
                     "The last card seemed really important though..."},
-                new []{ Flag.defaultFlag, Flag.janHelp, Flag.janCard}),
+                new []{ Flag.defaultFlag, Flag.janHelp, Flag.janCard},
+                new [] { InventoryItem.ItemType.foolCard }),
         }},
         {Name.Alex, new Convo[] {
+            new (
+                new []{ "Next!"},
+                new []{ Flag.defaultFlag}),
             new (
                 new []{ "Sorry, Dylan was in line before you","...Oh, it's you!",
                     "I see you're a ghost now, well, I think it's pretty obvious I'm not the one responsible for that.",
                     "I've been doing tarot readings all night."},
                 new []{ Flag.defaultFlag,Flag.alexLine}),
-            new (
-                new []{  "Next!"},
-                new []{ Flag.defaultFlag}),
         }},
         {Name.Dylan, new Convo[] {
             new (
@@ -218,7 +225,7 @@ public class DialogueInventory : MonoBehaviour
                 new []{ Flag.defaultFlag}),
             new (
                 new []{  "Go to the lake"},
-                new []{ Flag.defaultFlag}),
+                new []{ Flag.defaultFlag, Flag.earlCandy}),
             new (
                 new []{  "Caramel, my favorite!","...so, you want to know about the kraken?",
                     "Well, those camp stories you heard? They're true.",
@@ -333,7 +340,7 @@ public class DialogueInventory : MonoBehaviour
                 new []{"Hey roomie! Why are you all see-through now?", "...","oh ... you're dead?? How tragic!",
                     "Hey!!! Just cause I wasn't in our cabin doesn't mean I had anything to do with this.",
                     " Every other night I've snuck out, and now you notice?",
-                    "What have I been doing? Just getting an extra look at (hot camp counselor name here). Isn't he dreamy???",
+                    "What have I been doing? Just getting an extra look at Kyle. Isn't he dreamy???",
                     "He pretends not to notice me, but I know it takes everything in him to look away!",
                     " Good thing they don't have curtains here. Normally he's asleep by now, I wonder why he's awake tonight...",
                     "Anyways, get out of here! I have a cute boy to stare at." },

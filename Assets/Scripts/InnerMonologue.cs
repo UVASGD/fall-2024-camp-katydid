@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -76,14 +77,14 @@ public class InnerMonologue : MonoBehaviour
     {
         //test conditions
         //needed both to test, but both can't be active at once
-        /*if (f == DialogueInventory.flags.testFlag2 && playerScript.dialogueFlags.Contains(DialogueInventory.flags.testFlag1))
+        if (f == DialogueInventory.flags.testFlag2 && playerScript.dialogueFlags.Contains(DialogueInventory.flags.testFlag1))
         {
             monologueStart(0, true);
         }
         else if (f == DialogueInventory.flags.testFlag1 && playerScript.dialogueFlags.Contains(DialogueInventory.flags.testFlag2))
         {
             monologueStart(0, true);
-        }*/
+        }
 
         // if (f == Flag.monologueFlag1 && playerScript.dialogueFlags.Contains(Flag.testItemFlag))
         // {
@@ -127,3 +128,4 @@ public class InnerMonologue : MonoBehaviour
         }
     }
 }
+*/
