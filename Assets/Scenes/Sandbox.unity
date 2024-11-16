@@ -9247,7 +9247,7 @@ PrefabInstance:
       objectReference: {fileID: 1359247117}
     - target: {fileID: 9175809396761611137, guid: b2d0776e809bfdf4696ed64890adbe5e, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Hey!!|You should go talk to John
+      value: 1234567890123456789012345678901234567890123456789012345678901234567890123456789
       objectReference: {fileID: 0}
     - target: {fileID: 9175809396761611137, guid: b2d0776e809bfdf4696ed64890adbe5e, type: 3}
       propertyPath: dialogue.Array.data[1]
