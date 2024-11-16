@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private UI_Inventory uI_Inventory;
 
     [SerializeField] private Animator baseAnim;
+    [SerializeField] private Animator hairAnim;
     [SerializeField] private Animator eyeAnim;
     [SerializeField] private Transform eyeTrans;
     [SerializeField] private Transform trans;
@@ -50,6 +51,7 @@ public class Player : MonoBehaviour
         spriteArray[2] = PlayerPrefs.GetInt("eyeCIndex") + PlayerPrefs.GetInt("eyeIndex") * 5;
 
         baseAnim.SetFloat("BaseIndex", (float) spriteArray[0]);
+        hairAnim.SetFloat("HairIndex", (float)spriteArray[1]);
         eyeAnim.SetFloat("EyeIndex", (float)spriteArray[2]);
         updateX(1);
         updateY(-1);
@@ -83,13 +85,15 @@ public class Player : MonoBehaviour
     private void updateX(float num)
     {
         baseAnim.SetFloat("X", num);
+        hairAnim.SetFloat("X", num);
         eyeAnim.SetFloat("X", num);
     }
     private void updateY(float num)
     {
         baseAnim.SetFloat("Y", num);
+        hairAnim.SetFloat("Y", num);
 
-        if(num > 0)
+        if (num > 0)
         {
             //eyeAnim.SetLayerWeight(0,0);
             eyeTrans.position = trans.position + new Vector3(0, 0, 0.02f);
