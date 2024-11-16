@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField] private UI_Inventory uI_Inventory;
     [SerializeField] private List<DialogueInventory.ConvoMetadata> knownDialoguesSaveLocation;
     
-    public HashSet<DialogueInventory.Flag> dialogueFlags = new HashSet<DialogueInventory.Flag>();
+    public HashSet<Flag> dialogueFlags = new HashSet<Flag>();
 
     private void Start()
     {
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
         for(int i=0; i < data.flags.Length; i++)
         {
-            dialogueFlags.Add((DialogueInventory.Flag)data.flags[i]);
+            dialogueFlags.Add((Flag)data.flags[i]);
         }
 
         for(int i=0; i < data.inventoryItems.Length; i++)
@@ -62,8 +62,8 @@ public class Player : MonoBehaviour
         }
 
         knownDialoguesSaveLocation = data.learnedDialogues;
+        knownDialoguesSaveLocation ??= new List<DialogueInventory.ConvoMetadata> { };
         DialogueInventory.LoadData(this, in knownDialoguesSaveLocation);
-        
         transform.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
         moveLock = true;
         Invoke("moveLockOff", 0.5f);
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
     //testing purposes
     public void printFlags()
     {
-        DialogueInventory.Flag[] flagsEnum = new DialogueInventory.Flag[dialogueFlags.Count];
+        Flag[] flagsEnum = new Flag[dialogueFlags.Count];
         dialogueFlags.CopyTo(flagsEnum);
         string output = "";
         for (int i = 0; i < flagsEnum.Length; i++)

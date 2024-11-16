@@ -13,8 +13,6 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
-    public Sprite mattressSpringSprite;
-    public Sprite noteSprite;
-    public Sprite shoesSprite;
-    public Sprite pencilSprite;
+    [SerializeField]
+    public Dictionary<InventoryItem.ItemType, Sprite> Sprites;
 }

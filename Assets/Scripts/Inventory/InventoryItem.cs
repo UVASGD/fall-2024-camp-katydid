@@ -6,15 +6,23 @@ using UnityEngine;
 [System.Serializable]
 public class InventoryItem
 {
+    // ReSharper disable InconsistentNaming
     public enum ItemType
     {
-        MattressSpring,
-        Note,
-        Shoes,
-        Pencil,
-        None
+        None = 0,
+        batteries,
+        medKey, // in game
+        sleepPill, // in game
+        foolCard,
+        blankBit, // in game
+        jellyBeans,
+        receiptOne,
+        receiptTwo,
+        candy,
+        tNote,
     }
 
+    
     public InventoryItem()
     {
         this.itemType = ItemType.None;
@@ -28,12 +36,10 @@ public class InventoryItem
     {
         switch (itemType)
         {
+            case ItemType.None:             
+                return null;
             default:
-            case ItemType.MattressSpring:   return ItemAssets.Instance.mattressSpringSprite;
-            case ItemType.Note:             return ItemAssets.Instance.noteSprite;
-            case ItemType.Shoes:            return ItemAssets.Instance.shoesSprite;
-            case ItemType.Pencil:           return ItemAssets.Instance.pencilSprite;
-            case ItemType.None:             return null;
+                return ItemAssets.Instance.Sprites[itemType];
         }
     }
 
