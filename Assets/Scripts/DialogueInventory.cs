@@ -28,6 +28,12 @@ public class DialogueInventory : MonoBehaviour
     // and holds all the metadata in another list 
     public List<String> learnedDialogueStrings;
     private List<ConvoMetadata> _learnedDialogueMetadata;
+
+        public static DialogueInventory Get()
+    {
+        SetupSingleton();
+        return _singleton;
+    }
    
     
     private static void SetupSingleton(Player inPlayer = null)
