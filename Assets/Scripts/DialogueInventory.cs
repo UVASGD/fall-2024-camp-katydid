@@ -103,9 +103,4 @@ public class DialogueInventory : MonoBehaviour
         }
     }
     
-    public static DialogueInventory Get()
-    {
-        SetupSingleton();
-        return _singleton;
-    }
 }

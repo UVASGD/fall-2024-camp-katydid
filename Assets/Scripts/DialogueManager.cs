@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     public bool isInDialogue = false;
 
     [SerializeField] private InventoryItem[] inventoryItem;
-    [SerializeField] private new Camera camera;
+    [SerializeField] private Camera camera;
     private Canvas _textbox;
     private TextMeshProUGUI _textMeshPro;
     private TextMeshProUGUI _nameTMP;

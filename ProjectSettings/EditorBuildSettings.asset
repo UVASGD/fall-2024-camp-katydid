@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CharacterCreation.unity
-    guid: 972371ea81f84294b9fd54709f8c77a2
-  - enabled: 1
-    path: Assets/Scenes/Sandbox.unity
-    guid: 320fe0800c1eba3428cc96dee4f44ed1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 75213e596f4c4f1438ce66694161be82
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 99fe747e35fad3645b48c47a4c594a36
   - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 75213e596f4c4f1438ce66694161be82
+    path: Assets/Scenes/CharacterCreation.unity
+    guid: 972371ea81f84294b9fd54709f8c77a2
+  - enabled: 1
+    path: Assets/Scenes/Camp.unity
+    guid: 82fb67d69ec748747b7c270a7aaf19b3
   m_configObjects: {}

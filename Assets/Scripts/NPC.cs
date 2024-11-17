@@ -5,7 +5,6 @@ using System.Linq;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using TMPro;
-using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;

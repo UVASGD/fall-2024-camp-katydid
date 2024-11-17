@@ -31,7 +31,7 @@ public class StartMenu : MonoBehaviour
     {
         if(data != null)
         {
-            SceneManager.LoadScene(sceneName: "Sandbox");
+            SceneManager.LoadScene(sceneName: "Camp");
         }
     }
 

@@ -66,7 +66,7 @@ public class SpriteChange : MonoBehaviour
         PlayerPrefs.SetInt("hairCIndex", hairCIndex);
         PlayerPrefs.SetInt("eyeIndex", eyeIndex);
         PlayerPrefs.SetInt("eyeCIndex", eyeCIndex);
-        SceneManager.LoadScene(sceneName: "Sandbox");
+        SceneManager.LoadScene(sceneName: "Camp");
     }
 
     public void bodyUp()

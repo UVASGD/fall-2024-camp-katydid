@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CreditsScene : MonoBehaviour
-{
-    public void backToStart()
+{ 
+    public void BackToStart()
     {
         SceneManager.LoadScene(sceneName: "StartMenu");
     }
