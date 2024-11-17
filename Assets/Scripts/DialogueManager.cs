@@ -94,19 +94,21 @@ public class DialogueManager : MonoBehaviour
     {
         //AdjustDialogueArrow();
         _nameTMP.SetText(NameEnumToString(npc.npcName));
-        isInDialogue = true;
+        
         playerScript.moveLock = true;
+        dialogueIndex = 0;
         currentConvoIndex = convoIndex;
         currentNPC = npc;
-        if (!currentNPC)
-        {
-            Debug.LogError("No nPC");
-        }
+        dialogueIndex = 0;
         NextDialogue();
     }
     
     private void NextDialogue()
     {
+        if (dialogueIndex == 0)
+        {
+            isInDialogue = true;
+        }
         Convo currentConvo = currentNPC.GetConvo(currentConvoIndex);
         if(dialogueIndex < currentConvo.Dialogue.Length)
         {

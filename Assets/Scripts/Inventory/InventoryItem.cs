@@ -54,16 +54,16 @@ public class InventoryItem
 
     public static Dictionary<ItemType, String> ItemDescriptions = new()
     {
-        {ItemType.batteries, "AA Batteries: For Drew’s Walkman"},
+        {ItemType.batteries, "AA Batteries: For Drew's Walkman"},
         {ItemType.medKey, "Med Cabinet Key: investigate the med cabinet"},
-        {ItemType.sleepPill, "Sleeping pill bottle: it’s empty…"},
+        {ItemType.sleepPill, "Sleeping pill bottle: it's empty"},
         {ItemType.blankBit, "Ripped Blanket Piece: Must be from the Rose Cabin."},
         {ItemType.foolCard, "The Fool Tarot Card: Is Cletus involved?"},
         {ItemType.jellyBeans, "Jelly Beans: Earl told me to bring these to the lake. Why would a kraken like jelly beans?"},
         {ItemType.receiptOne, "Jelly Beans Receipt, Dylan: Talk to Dylan"},
         {ItemType.receiptTwo, "Jelly Beans Receipt, Dennis: Talk to Dennis."},
          {ItemType.candy, "Caramel Candy: Earl's favorite candy"},
-        {ItemType.tNote, "“It’s done” Note: To Vanessa, from Tony."},
+        {ItemType.tNote, "ï¿½Itï¿½s doneï¿½ Note: To Vanessa, from Tony."},
     };
 
     public string GetItemDescription()

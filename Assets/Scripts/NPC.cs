@@ -29,6 +29,10 @@ public class NPC : MonoBehaviour
     {
         _dialogueManager = DialogueManager.Get();
         bool didWork = DialogueInventory.GetDialogues(npcName, out _dialogues);
+        if (!didWork)
+        {
+            Debug.LogError("Fuck");
+        }
         _player = GameObject.Find("Player");
         _playerScript = _player.GetComponent<Player>();
         // var uiEnableGo = GameObject.Find("Inventory Enabler");
@@ -72,40 +76,48 @@ public class NPC : MonoBehaviour
     // dialogue reference, index of dialogue in dialogues
     int GetDialogue()
     {
+        int dialogueNum = 0;
         for (int i = 1; i < _dialogues.Length; i++)
         {
             var currentDialogue = _dialogues[i];
-            var flags = currentDialogue.RequiredFlags;
-            if (flags.Length < 1)
+            bool containsNoGranted = true;
+            foreach(var flag in currentDialogue.GrantedFlags)
             {
-                Debug.Log(npcName +" has no required flags for " + _dialogues[i].Dialogue);
+                if (_playerScript.dialogueFlags.Contains(flag))
+                {
+                    containsNoGranted = false;
+                }
             }
-            var flagAddedOnComplete = flags.Last();
-            
-            if (!_playerScript.dialogueFlags.Contains(flagAddedOnComplete))
+            if(containsNoGranted)
             {
-                int numOfRequiredFlags = flags.Length - 1;
+                var reqFlags = currentDialogue.RequiredFlags;
+                dialogueNum = i;
+                int numOfRequiredFlags = reqFlags.Length - 1;
                 for (int reqIndex = 0; reqIndex < numOfRequiredFlags ; reqIndex++)
                 {
-                    if (!_playerScript.dialogueFlags.Contains(flags[reqIndex]))
+                    if (!_playerScript.dialogueFlags.Contains(reqFlags[reqIndex]))
                     {
-                        spriteRenderer.sprite = dialogueQueue[1];
-                        return i-1;
+                        dialogueNum = 0;
+                        break;
+                        
                     }
                 }
             }
         }
+
+        if (dialogueNum == 0)
+        {
+            spriteRenderer.sprite = dialogueQueue[1];
+            return 0; 
+        }
+
         spriteRenderer.sprite = dialogueQueue[2];
-        return _dialogues.Length-1;
+        return dialogueNum;
     }
 
     public ref Convo GetConvo(in int index)
     {
-        if (index > _dialogues.Length)
-        {
-            Debug.Log("Warning: Too long");
-        }
-        
+        Debug.Log(index);
         return ref _dialogues[index];
     }
     
