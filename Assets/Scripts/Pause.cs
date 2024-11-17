@@ -13,8 +13,8 @@ public class Pause : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  
-        pauseMenu = GameObject.Find("PauseMenu");        
+    {
+        pauseMenu = gameObject.transform.Find("PauseMenu").gameObject;
         pauseMenu.SetActive(false);
         player = GameObject.Find("Player").GetComponent<Player>();
     }
