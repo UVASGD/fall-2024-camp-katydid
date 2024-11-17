@@ -14,7 +14,7 @@ public class SaveData
     public float[] playerPosition;
     public int[] flags;
     public int[] inventoryItems;
-    public List<DialogueInventory.ConvoMetadata> learnedDialogues;
+    public List<ConvoMetadata> learnedDialogues;
     
     public SaveData(Player player) 
     { 

@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     
     [SerializeField] private UI_Inventory uI_Inventory;
-    public HashSet<flags> dialogueFlags = new HashSet<flags>();
 
     [SerializeField] private Animator baseAnim;
     [SerializeField] private Animator hairAnim;
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour
             monologueFlag1,
             monologueFlag2//demo test flags
     };
-    [SerializeField] private List<DialogueInventory.ConvoMetadata> knownDialoguesSaveLocation;
+    [SerializeField] private List<ConvoMetadata> knownDialoguesSaveLocation;
     
     public HashSet<Flag> dialogueFlags = new HashSet<Flag>();
 
@@ -80,7 +79,7 @@ public class Player : MonoBehaviour
         }
 
         knownDialoguesSaveLocation = data.learnedDialogues;
-        knownDialoguesSaveLocation ??= new List<DialogueInventory.ConvoMetadata> { };
+        knownDialoguesSaveLocation ??= new List<ConvoMetadata> { };
         DialogueInventory.LoadData(this, in knownDialoguesSaveLocation);
         transform.position = new Vector3(data.playerPosition[0], data.playerPosition[1], data.playerPosition[2]);
         moveLock = true;
@@ -166,7 +165,7 @@ public class Player : MonoBehaviour
         inventory.AddInventoryItem(inventoryItem);
     }
 
-    public void SaveLearnedDialogues(in List<DialogueInventory.ConvoMetadata> inList)
+    public void SaveLearnedDialogues(in List<ConvoMetadata> inList)
     {
         knownDialoguesSaveLocation = inList;
     }

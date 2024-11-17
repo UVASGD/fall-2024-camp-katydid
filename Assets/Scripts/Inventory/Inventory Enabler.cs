@@ -10,9 +10,12 @@ public class InventoryEnabler : MonoBehaviour
     {
         // Find the parent Canvas and get its Image component
         Canvas parentCanvas = GetComponentInParent<Canvas>();
+        parentCanvas.enabled = true;
+        parentCanvas.gameObject.SetActive(true);
         if (parentCanvas != null)
         {
             parentCanvasImage = parentCanvas.GetComponent<Image>();
+            parentCanvasImage.enabled = true;
             if (parentCanvasImage == null)
             {
                 Debug.LogWarning("Parent Canvas does not have an Image component.");
