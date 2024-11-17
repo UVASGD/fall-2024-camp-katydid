@@ -100,15 +100,13 @@ public class DialogueManager : MonoBehaviour
         currentConvoIndex = convoIndex;
         currentNPC = npc;
         dialogueIndex = 0;
-        NextDialogue();
+        _textbox.enabled = true;
+        isInDialogue = true;
+        _textMeshPro.SetText(currentNPC.GetConvo(currentConvoIndex).Dialogue[dialogueIndex]);
     }
     
     private void NextDialogue()
     {
-        if (dialogueIndex == 0)
-        {
-            isInDialogue = true;
-        }
         Convo currentConvo = currentNPC.GetConvo(currentConvoIndex);
         if(dialogueIndex < currentConvo.Dialogue.Length)
         {

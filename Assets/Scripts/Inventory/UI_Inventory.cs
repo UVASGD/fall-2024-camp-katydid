@@ -54,6 +54,7 @@ public class UI_Inventory : MonoBehaviour
             else
             {
                 itemSlotRectTransform = Instantiate(itemTemplate, inventoryEnabler).GetComponent<RectTransform>();
+                itemSlotRectTransform.transform.parent = inventoryEnabler.transform;
                 instantiatedItems.Add(itemSlotRectTransform);
             }
 
@@ -104,7 +105,7 @@ private void ToggleItemText(Transform itemSlot, InventoryItem item)
             {
                 // If it's inactive, enable it and update the text
                 itemText.gameObject.SetActive(true);
-                Debug.Log(item.GetItemDescription());
+                //Debug.Log(item.GetItemDescription());
                 textComponent.text = item.GetItemDescription();
             }
         }

@@ -29,10 +29,6 @@ public class NPC : MonoBehaviour
     {
         _dialogueManager = DialogueManager.Get();
         bool didWork = DialogueInventory.GetDialogues(npcName, out _dialogues);
-        if (!didWork)
-        {
-            Debug.LogError("Fuck");
-        }
         _player = GameObject.Find("Player");
         _playerScript = _player.GetComponent<Player>();
         // var uiEnableGo = GameObject.Find("Inventory Enabler");
@@ -117,7 +113,7 @@ public class NPC : MonoBehaviour
 
     public ref Convo GetConvo(in int index)
     {
-        Debug.Log(index);
+        //Debug.Log(index);
         return ref _dialogues[index];
     }
     

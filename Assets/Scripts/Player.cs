@@ -157,7 +157,6 @@ public class Player : MonoBehaviour
             output += flagsEnum[i];
             output += " ";
         }
-        Debug.Log(output);
     }
 
     public void AddToInventory(InventoryItem inventoryItem)
