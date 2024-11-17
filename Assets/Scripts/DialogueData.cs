@@ -467,7 +467,7 @@ public static readonly SortedDictionary<Name, Convo[]> AllDialogues = new ()
                     " And I have a feeling they knew about my jelly bean addiction, cause there were some on the bed to lure me out.",
                     "You should talk with JANET.",
                     "She's in charge of keeping track of the camp shop purchases, that way you can find out who bought the jelly beans."},
-                new []{ Flag.defaultFlag,Flag.beanKrak, }),
+                new []{ Flag.defaultFlag, Flag.itemJellyBeans, Flag.beanKrak}),
         }},
         
 

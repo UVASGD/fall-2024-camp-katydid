@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     
     private int dialogueIndex = 0;
     private int currentConvoIndex = 0;
-    private NPC currentNPC;
+    public NPC currentNPC;
 
     private static DialogueManager _singleton;
     
