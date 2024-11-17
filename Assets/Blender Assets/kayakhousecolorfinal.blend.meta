@@ -3,7 +3,167 @@ guid: 05e0fb097f16cdb4eaa6c616e50d89b9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1
+    second: {fileID: 2100000, guid: ff05895fb45c9f04e88bc1d22ad9b0fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: cf7e1faf46e284644a00667b1a8ab0ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cubby1
+    second: {fileID: 2100000, guid: 850e75cf1c4e44d468d880a86bb0b8e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cubby2
+    second: {fileID: 2100000, guid: 9271be69e084f41489c0f833734f18e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.003
+    second: {fileID: 2100000, guid: fba6f073d03e4a5439ea76305720b40a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.004
+    second: {fileID: 2100000, guid: 149b3c1f5b28a2643a65058ef6750b35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.005
+    second: {fileID: 2100000, guid: 6afbc33bce6cdb146bdc6a4547ff6b0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.006
+    second: {fileID: 2100000, guid: 601cacbc5dc647f44ae37e66c20be8ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.008
+    second: {fileID: 2100000, guid: 93cdf3a4f931e1e458451683e24b09bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.009
+    second: {fileID: 2100000, guid: 8ca19ca16bbb1884fb2a2623923ab91a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.010
+    second: {fileID: 2100000, guid: 58d566dd88a4485498bc91009ffb4b82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.011
+    second: {fileID: 2100000, guid: 3b68a773621f85a40907c61d436c34f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dockboards.012
+    second: {fileID: 2100000, guid: 6bd2da75327851e4a8da3628ef485826, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.001
+    second: {fileID: 2100000, guid: fe96e9cee8c6cfc42aad95d3db23a099, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.002
+    second: {fileID: 2100000, guid: 457aa5f52e496de448a4e16e913ff348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.006
+    second: {fileID: 2100000, guid: 2934aaf09d9dc614785abf4dfa088bd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.007
+    second: {fileID: 2100000, guid: 9d42377475b5ed240934747268ca169a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.008
+    second: {fileID: 2100000, guid: ed031b02bdc40444388e00677fbf8536, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: greenkayak.009
+    second: {fileID: 2100000, guid: 782fba4f2c063414a84ab3fe35b7d232, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak house floor
+    second: {fileID: 2100000, guid: 4c0d38d2c54ac4b4cb7fa7468aba0b79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayak house poles
+    second: {fileID: 2100000, guid: 1079d992ea2375a43b4684346f323a15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kayakhouseotherboards
+    second: {fileID: 2100000, guid: 1fdc4f33223728648901efdb49ec5abe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orangekayak.001
+    second: {fileID: 2100000, guid: 3acd0e60da7ea1d41a263334fc26a315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orangekayak.002
+    second: {fileID: 2100000, guid: 4b3c7b510bf294f41b3520db9f0121d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orangekayak.003
+    second: {fileID: 2100000, guid: b8833f48c1b3d43408e5d6b7018fc03e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddle
+    second: {fileID: 2100000, guid: e3e9b539f792a95439d8cd4f7be0cbd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddles
+    second: {fileID: 2100000, guid: ae6ac8258eef1724584b3d12fc52b5e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddlesback
+    second: {fileID: 2100000, guid: 05246f32ffccb844cb54c071f1ecd273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddlesback.001
+    second: {fileID: 2100000, guid: eba658b5d77e7674d9d1cdb8601670d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paddlesback.002
+    second: {fileID: 2100000, guid: 638993bfe3e73c241885ecbf66f2a324, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redkayak.001
+    second: {fileID: 2100000, guid: 30a26a554ec1b7e42ae4f1d2923291f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redkayak.002
+    second: {fileID: 2100000, guid: 3b685b96b3179de48b02213f74a2b7a2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,15 +195,15 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: 4
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
@@ -52,7 +212,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -71,7 +231,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -90,7 +250,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 4
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

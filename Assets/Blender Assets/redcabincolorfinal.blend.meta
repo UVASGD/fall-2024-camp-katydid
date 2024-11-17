@@ -3,7 +3,352 @@ guid: 4b5f9e16a50bce14da69285300b5bd63
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRAWER
+    second: {fileID: 2100000, guid: 509fc6c1a2db6ad488b872865592ce00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRAWER.001
+    second: {fileID: 2100000, guid: 20785e4ce8095cc47aa6f45b8612c33b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRAWER.002
+    second: {fileID: 2100000, guid: ebb1703d1e086094cb309c1da6c00c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRAWER.003
+    second: {fileID: 2100000, guid: d5fa5b1cc483c9c48884551ac832ae98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEGS
+    second: {fileID: 2100000, guid: 641086e93d64bd44aa1b6fc89516e640, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEGS.001
+    second: {fileID: 2100000, guid: b0fb9284afda271448b09ca67bc36224, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEGS.002
+    second: {fileID: 2100000, guid: 6f35f889a89952446bf658e716d5763a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LEGS.003
+    second: {fileID: 2100000, guid: 5f4f66439cd2b9d48a1c3f3b79e1b126, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.1043
+    second: {fileID: 2100000, guid: f4044bdc846ed734fa02cf7fea6c3245, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: POLES.001
+    second: {fileID: 2100000, guid: 0b13ce78db334084aa6252f78d2d9834, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RED2
+    second: {fileID: 2100000, guid: ec1586f186272ba4699e7443a643a0dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: binocular
+    second: {fileID: 2100000, guid: f7303e6c418190742b2c9060005d5ad8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.008
+    second: {fileID: 2100000, guid: 98560a3526fa28a46af53e7d2402d9fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.010
+    second: {fileID: 2100000, guid: f4c91a199b13b5c47ac57c5bc0cbb600, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.012
+    second: {fileID: 2100000, guid: c1e0a59554220de40b9e6f7b4bfb04bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.014
+    second: {fileID: 2100000, guid: f0e727d2c38ed0b47912f42aa022b667, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.036
+    second: {fileID: 2100000, guid: 6c5da094abf733344b7c2751e4145496, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.037
+    second: {fileID: 2100000, guid: 091b31bb36f92e541a51beee18f264df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.038
+    second: {fileID: 2100000, guid: 7758bc3272d6b47438525dfa38c8a5fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.039
+    second: {fileID: 2100000, guid: d0b0d194dbd12ed4590ef674d7cf4261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.040
+    second: {fileID: 2100000, guid: 810c64d2e55e04c4284ad09792d18eac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.041
+    second: {fileID: 2100000, guid: 1cdeefcbafb9cd24991531c7d4dc4a67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.042
+    second: {fileID: 2100000, guid: a0bc7e6051faf4c42af7e9c9337c3bd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.043
+    second: {fileID: 2100000, guid: f4f7c946ef0cf4c4391bc4f78bc89992, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.044
+    second: {fileID: 2100000, guid: 00b91db3650e36c43a215774dc4c5b20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.045
+    second: {fileID: 2100000, guid: a099370db3d462744bf063e8a3e7d383, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.046
+    second: {fileID: 2100000, guid: 27a267b4bf9192143b5cab0ba1821b5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.047
+    second: {fileID: 2100000, guid: 30339073978408b4abb4c600de8db459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.048
+    second: {fileID: 2100000, guid: dd96ea7a7067f79429199a9b2926fce9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.049
+    second: {fileID: 2100000, guid: 2a4a33686b92d2249a269c58a3fac861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.050
+    second: {fileID: 2100000, guid: b0d0fef053fc4fd42887ef9cee884d34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.051
+    second: {fileID: 2100000, guid: 65deb2a1227ad7541b7631057b47365e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.052
+    second: {fileID: 2100000, guid: b22b5005304f693458a59ce44ca5dc69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.053
+    second: {fileID: 2100000, guid: 03411972de822b94d91172402613f04a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.054
+    second: {fileID: 2100000, guid: a00baed9dc4caa04c801824113cf3971, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.055
+    second: {fileID: 2100000, guid: 5dd75dbb1d81797489a9dc0a5ab5fe4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.056
+    second: {fileID: 2100000, guid: ddc2f5a7dcaaf744e8929366c8b36939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.057
+    second: {fileID: 2100000, guid: ad2c2c20d10c46c4a969abfbd7c33ac6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.058
+    second: {fileID: 2100000, guid: 889d680010bf4bb4180a55ac81f03ae1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunkframe.059
+    second: {fileID: 2100000, guid: c58fc4342410cf54f8a3dd338ee8a34c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin roof 1.001
+    second: {fileID: 2100000, guid: 426604839600c8447b251e04af0905e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin1door.002
+    second: {fileID: 2100000, guid: fe372af5db1acd24cb5dfeed964051d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabin1door.003
+    second: {fileID: 2100000, guid: d3f35ff1a0435bc4aba2b46c0124259d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edgepoles.001
+    second: {fileID: 2100000, guid: a3e5a6484d0e9cf499784ecd7045c2cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floorboard.001
+    second: {fileID: 2100000, guid: f6b98b42bae6a33419d6bc079d2a9b84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillow.008
+    second: {fileID: 2100000, guid: 3429dbe92118dc64e83decc90a9dcd1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillow.010
+    second: {fileID: 2100000, guid: 537f4bb4a61296e4a9722b9f7e493f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillow.014
+    second: {fileID: 2100000, guid: 10882db3604759f429169b37e25d7b86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: 23715327f738a3948ad58bf75a9753dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redbunk
+    second: {fileID: 2100000, guid: d57b2efbea43f6142a6cc54efc037401, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkbottom.009
+    second: {fileID: 2100000, guid: f2649f3a40046784099074fd173613de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkbottom.010
+    second: {fileID: 2100000, guid: f206c069a867cfc449f18156b44c336a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkbottom.011
+    second: {fileID: 2100000, guid: 98eacc2ba6eaeda48949184b75de2fd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkbottom.012
+    second: {fileID: 2100000, guid: 0e47ec6f3b4f376498e65362b957605f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge
+    second: {fileID: 2100000, guid: ecbdb69b11628664c9c1955358e431b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.009
+    second: {fileID: 2100000, guid: dff13a8082a7bd942a508a9c1c311a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.010
+    second: {fileID: 2100000, guid: 27382bf0d2af75b44aa0e2f5a15e8599, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.011
+    second: {fileID: 2100000, guid: 8ab954050a7d5d24287df58857d1fbfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.012
+    second: {fileID: 2100000, guid: ee685aa1eec2e7d418c498c300b49511, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.037
+    second: {fileID: 2100000, guid: ee7b7b08d1bbaa14695dd1008422a5d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.038
+    second: {fileID: 2100000, guid: 2e692a93bb8edec4db358ebd7505e320, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunkhinge.039
+    second: {fileID: 2100000, guid: 8e45d30984ce6114ea6ea266cc045bc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunklid.009
+    second: {fileID: 2100000, guid: f59fe58248bacf34ebb1bcd02774b2a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunklid.010
+    second: {fileID: 2100000, guid: a9fad69fd47f5f14c91a01f987cc898e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunklid.011
+    second: {fileID: 2100000, guid: 9ca4296e0d27c2d449e56cf982df7232, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunklid.012
+    second: {fileID: 2100000, guid: c2f10f0e3f3489e4d8563a21a1113d0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wallboard.001
+    second: {fileID: 2100000, guid: b82f0b8b1440c114e8204f4ad28ce97c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windowpane.001
+    second: {fileID: 2100000, guid: 2586257856d2c854e93755fe6b4cf4a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windowsill.001
+    second: {fileID: 2100000, guid: 53f67fc0493fd8541961deb3665e31c5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,15 +380,15 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: 8
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
@@ -52,7 +397,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -71,7 +416,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -90,7 +435,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 8
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

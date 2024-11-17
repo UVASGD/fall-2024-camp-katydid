@@ -3,7 +3,192 @@ guid: e501811a395a17f4cb22d19b945c78e2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.243
+    second: {fileID: 2100000, guid: 6c4b2d55055a434418ef4880d60142ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TABLE
+    second: {fileID: 2100000, guid: 2ea0f695131137545a1fad3ee3d18457, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: art pavilion roof
+    second: {fileID: 2100000, guid: 52a1c301c1eb2f940b67b3e9ea84c91a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boards
+    second: {fileID: 2100000, guid: ea3dd9f1d7d284f4f97577bb052ea66b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.009
+    second: {fileID: 2100000, guid: 5dbb15fb22acb3b49a7331a6752db733, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.010
+    second: {fileID: 2100000, guid: ab2b05a33f13ba249a57a47b8b342087, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.011
+    second: {fileID: 2100000, guid: 6f2ab0b613227fb4487127c2197ceb9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.012
+    second: {fileID: 2100000, guid: d4c237c61a7e87f46a161c0ab1a28353, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.013
+    second: {fileID: 2100000, guid: 991478373d7d7a842a88fbd11bb67b73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.014
+    second: {fileID: 2100000, guid: 08d7351c46f58834ba76e7aee11aedcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.015
+    second: {fileID: 2100000, guid: ba03d5f5935d54f4689f1c1494205364, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet.016
+    second: {fileID: 2100000, guid: 4dcaf8c8162dbee44b9da63e543d133e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: counter.004
+    second: {fileID: 2100000, guid: 72e7d032509ea76409c66428aa9e040f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: counter.005
+    second: {fileID: 2100000, guid: fcee5680b43fcba468e9aa071bd564c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: counter.006
+    second: {fileID: 2100000, guid: 1ac4a00a35f233b4e8e177377168bc78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drawer.001
+    second: {fileID: 2100000, guid: fa5ed1537cc6c91478d67b5f0a3e6f52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drawer.002
+    second: {fileID: 2100000, guid: 1fe60fc049eb37e42bf6789d7f4d928a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drawer.003
+    second: {fileID: 2100000, guid: 5df3bf8471c10ee47a5dbdc793f5d139, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floorboards
+    second: {fileID: 2100000, guid: b0c3ad3776142fc44abd05b6be2979ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.001
+    second: {fileID: 2100000, guid: b179ec519c286f148bfb95727e8c9b47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.002
+    second: {fileID: 2100000, guid: 63dcc3080e308e84d936d3cf2bc50187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.003
+    second: {fileID: 2100000, guid: 40e7b6508ab376e49bc6abd100b3a18f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.007
+    second: {fileID: 2100000, guid: 1b72796184908404caeafeffac5c06e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.008
+    second: {fileID: 2100000, guid: 08870c222abcfe8468507921d8a23727, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handle.009
+    second: {fileID: 2100000, guid: d284d1cf062dd384f8c1e5ede4dcbf49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pavillionpoles
+    second: {fileID: 2100000, guid: 64113776f5718f343a6305a7dfa2368c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picnictop
+    second: {fileID: 2100000, guid: c8ed1b5107f86644b82edb91fabd934e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table
+    second: {fileID: 2100000, guid: 41b8c08b02dce0f4196663aef5fd9af7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.006
+    second: {fileID: 2100000, guid: 11694928eaf0d934d83793a7abe8892a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.007
+    second: {fileID: 2100000, guid: 009354721f35d2742aad2ed0818fb20c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.008
+    second: {fileID: 2100000, guid: bcc83d68482795746b5a9321b20833a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.009
+    second: {fileID: 2100000, guid: 8c1b1d7dddc7ec2439927845744ee7ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.011
+    second: {fileID: 2100000, guid: b6d29d4a1938a694f965151f03b022d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.016
+    second: {fileID: 2100000, guid: bbe5d427aca98a7478fe76530a9d0cae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.017
+    second: {fileID: 2100000, guid: 13ba5d8260b05064f842d145b06f706c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.018
+    second: {fileID: 2100000, guid: 73feebc025083f3438ab17b921823cac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: table.019
+    second: {fileID: 2100000, guid: 65770bcbdc64e4348a90082182b6e31d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,15 +220,15 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: 7
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
@@ -52,7 +237,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
+    bakeAxisConversion: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -71,7 +256,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -90,7 +275,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 7
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
